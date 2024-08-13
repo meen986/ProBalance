@@ -17,7 +17,7 @@ $(document).ready(function () {
 	});
 });
 
-// to include header footer starts
+// to include header footer sidebar bottombar starts
 fetch('includes/header.html')
 	.then(response => response.text()) // Convert the response to text
 	.then(data => {
@@ -32,9 +32,23 @@ fetch('includes/footer.html')
 	})
 	.catch(error => console.error('Error fetching the HTML:', error));
 
-// to include header footer starts
+fetch('includes/sidebar.html')
+	.then(response => response.text()) // Convert the response to text
+	.then(data => {
+		document.getElementById('sidebar').innerHTML = data; // Insert the content into the div
+	})
+	.catch(error => console.error('Error fetching the HTML:', error));
+
+fetch('includes/bottombar.html')
+	.then(response => response.text()) // Convert the response to text
+	.then(data => {
+		document.getElementById('bottombar').innerHTML = data; // Insert the content into the div
+	})
+	.catch(error => console.error('Error fetching the HTML:', error));
+
+// to include header footer sidebar bottombar ends
 
 // page animation
 window.onload = function () {
 	scrolly();
-  };
+};

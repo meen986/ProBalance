@@ -27,12 +27,18 @@ p {
     line-height: 30px;
 }
 
+.logo {
+    font-size: 55px;
+    text-decoration: none;
+    color: var(--bs-gray-900);
+}
+
 .header {
     padding: 10px 0;
 }
 
 .header .box {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .header .box span {
@@ -79,26 +85,8 @@ p {
     padding-left: 25px;
 }
 
-@media all and (min-width: 992px) {
-    .dropdown-large {
-        min-width: 600px;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .dropdownMenu {
-        visibility: hidden;
-        display: block;
-        top: 30px;
-        transition: all 0.5s;
-        opacity: 0;
-    }
-
-    .dropMenu:hover .dropdownMenu {
-        visibility: visible;
-        top: 50px;
-        opacity: 1;
-    }
+.dropdown-large {
+    min-width: 600px;
 }
 
 .carousel-caption {
@@ -378,3 +366,32 @@ ul.ul li a:hover {
     padding: 10px;
     display: none;
 }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .dropdownMenu {
+        visibility: hidden;
+        display: block;
+        top: 30px;
+        transition: all 0.5s;
+        opacity: 0;
+    }
+
+    .dropMenu:hover .dropdownMenu {
+        visibility: visible;
+        top: 50px;
+        opacity: 1;
+    }
+ }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {  }
